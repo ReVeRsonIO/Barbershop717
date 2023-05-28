@@ -14,7 +14,6 @@ body{
     align-items: center;
     background-image: url(/images/bg-images/header-bg.jpg);
     background-repeat: no-repeat;
-    height: 6000px;
 }
 header{
     position: absolute;
@@ -22,9 +21,6 @@ header{
     background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
-}
-button:hover{
-    cursor: pointer;
 }
 input[type=button]{
     border: 2px solid #F4B22F;
@@ -38,6 +34,7 @@ input:hover{
 .container{
     max-width: 1520px;
     width: 100%;
+    margin: 0 auto;
 }
 header>.container{
     display: flex;
@@ -99,13 +96,10 @@ main{
     width: 860px;
     margin-bottom: 80px;
 }
-.billboard__button {
+.billboard .subscribe-button {
     font-size: 32px;
     line-height: 41px;
-    border: 2px solid #F4B22F;
-    background: transparent;
-    color: #E1E1E1;
-    border-radius: 10px;
+    
     padding: 30px 30px;
     
 }
@@ -421,18 +415,25 @@ tbody>tr{
 
 .contacts {
     display: flex;
-    margin-top: 40px;
+    justify-content: space-between;
+    margin-top: 40px; 
 }
 .contacts__info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .contacts__social-media {
     display: flex;
     flex-direction: column;
-    gap: 25px;
 }
-.social-media__header {
+.contacts__header {
     font-size: 32px;
     line-height: 41px;
+    margin-bottom: 25px;
+}
+.contacts__map{
+    height:fit-content;
 }
 .social-media__group {
     display: flex;
@@ -454,12 +455,95 @@ tbody>tr{
 .social-media__icon {
 }
 .social-media__text {
+    display: block;
+    line-height: 23px;
 }
 .contants__schedule {
 }
 .schedule__days-group {
     display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 18px 18px 18px 18px;
+    gap: 10px 20px;
+    grid-auto-flow: column;
+    
 }
 .schedule__day {
+    display: flex;
+    justify-content: space-between;
+    height:fit-content
+}
+.schedule__day *{
+    line-height: 23px;
+    height: 23px;
+    display: block;
+}
+.schedule__day-name {
+    width: 24px;
+}
+.schedule__time {
+}
+.contacts .subscribe-button{
+    font-size: 20px;
+    line-height: 26px;
+    padding: 18px 25px;
 }
 
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 80px;
+    padding: 60px 0px;
+    background-color: #0F0F0F;
+    
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo-link {
+}
+.footer__logo {
+}
+.footer__nav {
+    gap: 25px;
+}
+.footer__nav-item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+.footer__contacts {
+    gap: 20px;
+}
+.footer__contacts-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #CCCCCC;
+}
+
+.icon-wrap {
+}
+.footer__contacts-icon {
+}
+.footer__contacts-text {
+    display: inline;
+}
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer__menu-item {
+    color: #555555;
+    width: 169px;
+    text-align: left;
+}
+footer nav, footer section{ 
+    display: flex;
+    flex-direction: column;
+}
