@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop717</title>
+    <link rel="shortcut icon" href="/images/icons/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
@@ -33,26 +34,28 @@
     </header>
     <main>
         <section class="billboard">
-            <h1 class="billboard__h1">Благодаря нашей <span class="billboard__h1_orange">стрижке </span> твоя <span class="billboard__h1_orange">улыбка </span>будет сиять</h1>
-            <h2 class="billboard__h2">высококачественные услуги по стрижке и уходу за волосами сделанные по современным стандартам</h2>
-            <input type="button" value="Записаться" class="subscribe-button">
-            <section class="billboard__contacts">
-                <span class="billboard__contacts-header">Контакты:</span>
-                <article class="billboard__contacts-group">
-                    <a href="" class="billboard__contacts-link">
-                        <div class="billboard__contacts-item">
-                            <img src="/images/icons/adress.svg" alt="" class="billboard__icon">
-                            <span class="billboard__contacts-text">Ст. Ольгинская</span>
-                        </div>
-                    </a>
-                    <a href="" class="billboard__contacts-link">
-                        <div class="billboard__contacts-item">
-                            <img src="/images/icons/phone.svg" alt="" class="billboard__icon">
-                            <span class="billboard__contacts-text">+7 938 111-22-33</span>
-                        </div>
-                    </a>
-                </article>
-            </section>
+            <div class="container">
+                <h1 class="billboard__h1">Благодаря нашей <span class="billboard__h1_orange">стрижке </span> твоя <span class="billboard__h1_orange">улыбка </span>будет сиять</h1>
+                <h2 class="billboard__h2">высококачественные услуги по стрижке и уходу за волосами сделанные по современным стандартам</h2>
+                <input type="button" value="Записаться" class="subscribe-button">
+                <section class="billboard__contacts">
+                    <span class="billboard__contacts-header">Контакты:</span>
+                    <article class="billboard__contacts-group">
+                        <a href="" class="billboard__contacts-link">
+                            <div class="billboard__contacts-item">
+                                <img src="/images/icons/adress.svg" alt="" class="billboard__icon">
+                                <span class="billboard__contacts-text">Ст. Ольгинская</span>
+                            </div>
+                        </a>
+                        <a href="" class="billboard__contacts-link">
+                            <div class="billboard__contacts-item">
+                                <img src="/images/icons/phone.svg" alt="" class="billboard__icon">
+                                <span class="billboard__contacts-text">+7 938 111-22-33</span>
+                            </div>
+                        </a>
+                    </article>
+                </section>
+            </div>
         </section>
         <section class="services container">
             <article class="services__header block-header">
@@ -234,8 +237,38 @@
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
-                
-
+                <article class="comments__card">
+                    <div class="comments__icons-group">
+                        <img src="" alt="" class="comments_user-avatar">
+                        <div class="comments__star-group">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star">
+                        </div>
+                    </div>
+                    <blockquote class="comments__blockquote">
+                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <cite class="comments__username">Артем</cite>
+                    </blockquote> 
+                </article>
+                <article class="comments__card">
+                    <div class="comments__icons-group">
+                        <img src="" alt="" class="comments_user-avatar">
+                        <div class="comments__star-group">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star">
+                        </div>
+                    </div>
+                    <blockquote class="comments__blockquote">
+                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <cite class="comments__username">Артем</cite>
+                    </blockquote> 
+                </article>
             </div>
         </section>
         <section class="contacts container">
@@ -300,7 +333,7 @@
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4a5129ac00fa68139fbcef7a62c4e0b1db748c52b90234f0a68acce8c0863900&amp;width=984&amp;height=550&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </section>
-    </main>  
+    </main> 
     <footer>
         <div class="container">
             <a href="#" class="footer__logo-link">
@@ -338,5 +371,6 @@
             </section>
         </div>
     </footer>
+    <script src="/scripts/comments-slider.js"></script>
 </body>
 </html>
