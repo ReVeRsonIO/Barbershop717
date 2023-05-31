@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header-mainpage">
         <div class="container">
             <a href="" class="header__logo-link"><div class="header__logo"></div></a>
             <nav class="header__nav">
@@ -67,10 +67,10 @@
                 <img src="/images/icons/scissors.svg" alt="" class="services__icon icon_rotate">
             </article>
             <div class="services__btn-group">
-                <input type="button" value="Мужские" class="services__btn">
-                <input type="button" value="Женские" class="services__btn">
+                <input type="button" value="Мужские" class="services__btn" onClick="toggleTables()">
+                <input type="button" value="Женские" class="services__btn" onClick="toggleTables()">
             </div>
-            <table class="services__table">
+            <table class="services__table male-table">
                 <thead class="services__thead">
                     <tr class="services__th-row">
                         <th class="services__column-name">Стрижка</th>
@@ -127,6 +127,69 @@
                         </td>
                         <td class="services__cell">
                             <span class="services__name">Уход головы</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="services__table female-table">
+                <thead class="services__thead">
+                    <tr class="services__th-row">
+                        <th class="services__column-name">Стрижка</th>
+                        <th class="services__column-name">Бритье</th>
+                        <th class="services__column-name">Уход</th>
+                    </tr>
+                </thead>
+                <tbody class="services__tbody">
+                    <tr class="services__column">
+                        <td class="services__cell">
+                            <span class="services__name">Стрижка Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Стрижка Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Стрижка Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                    </tr>
+                    <tr class="services__column">
+                        <td class="services__cell">
+                            <span class="services__name">Бритье Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Бритье Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Бритье Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        
+                    </tr>
+                    <tr class="services__column">
+                        <td class="services__cell">
+                            <span class="services__name">Уход Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Уход Ж</span>
+                            <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                            <span class="services__cost">400 ₽</span>
+                        </td>
+                        <td class="services__cell">
+                            <span class="services__name">Уход Ж</span>
                             <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
                             <span class="services__cost">400 ₽</span>
                         </td>
@@ -201,7 +264,7 @@
                         </div>
                     </div>
                     <blockquote class="comments__blockquote">
-                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <p class="comments__quote">“1Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
@@ -217,7 +280,7 @@
                         </div>
                     </div>
                     <blockquote class="comments__blockquote">
-                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <p class="comments__quote">“2Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
@@ -233,7 +296,7 @@
                         </div>
                     </div>
                     <blockquote class="comments__blockquote">
-                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <p class="comments__quote">“3Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
@@ -249,7 +312,7 @@
                         </div>
                     </div>
                     <blockquote class="comments__blockquote">
-                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <p class="comments__quote">“4Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
@@ -265,7 +328,23 @@
                         </div>
                     </div>
                     <blockquote class="comments__blockquote">
-                            <p class="comments__quote">“Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <p class="comments__quote">“5Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
+                            <cite class="comments__username">Артем</cite>
+                    </blockquote> 
+                </article>
+                <article class="comments__card">
+                    <div class="comments__icons-group">
+                        <img src="" alt="" class="comments_user-avatar">
+                        <div class="comments__star-group">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star comments__star_fill">
+                            <img src="/images/icons/rate-star.svg" alt="" class="comments__star">
+                        </div>
+                    </div>
+                    <blockquote class="comments__blockquote">
+                            <p class="comments__quote">“6Недавно я посетил этот барбешоп и был в восторге. Атмосфера была гостеприимной, а персонал - дружелюбным и квалифицированным.”</p>
                             <cite class="comments__username">Артем</cite>
                     </blockquote> 
                 </article>
@@ -371,6 +450,134 @@
             </section>
         </div>
     </footer>
+    <div class="modals">
+        <div class="modals__overlay">
+            <div class="modals__main-modal">
+                <header class="modals__header">
+                    <img src="/images/icons/close-icon.svg" alt="" class="modals__icon">
+                    <h5 class="modals__header-text">Онлайн-запись</h5>
+                    <div class="weight"></div>
+                </header>
+                <section class="main-modal__content">
+                    <span class="modals__choose-text">Выберите:</span>
+                    <div class="modals__btn-group">
+                        <button class="modals__button">
+                            <img src="/images/icons/person-icon.svg" alt="" class="modals__icon">
+                            <span class="modals__btn-text">Специалист</span>
+                        </button>
+                        <button class="modals__button">
+                            <img src="/images/icons/calendar-icon.svg" alt="" class="modals__icon">
+                            <span class="modals__btn-text">Дата визита</span>
+                        </button>
+                        <button class="modals__button">
+                            <img src="/images/icons/list-icon.svg" alt="" class="modals__icon">
+                            <span class="modals__btn-text">Список услуг</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <div class="modals__choose-barber">
+                <header class="modals__header">
+                    <img src="/images/icons/back-icon.svg" alt="" class="modals__icon">
+                    <h5 class="modals__header-text">Выберите барбера</h5>
+                    <div class="weight"></div>
+                </header>
+                <section class="choose-barber__content">
+                    <div class="choose-barber__card">
+                        <div class="choose-barber__info">
+                            <img src="" alt="" class="choose-barber__avatar">
+                            <div class="choose-barber__wrap">
+                                <span class="choose-barber__position">Барбер</span>
+                                <span class="choose-barber__name">Артур</span>
+                            </div>
+                        </div>
+                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <div class="choose-barber__time-group">
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                        </div>
+                    </div>
+                    <div class="choose-barber__card">
+                        <div class="choose-barber__info">
+                            <img src="" alt="" class="choose-barber__avatar">
+                            <div class="choose-barber__wrap">
+                                <span class="choose-barber__position">Барбер</span>
+                                <span class="choose-barber__name">Артур</span>
+                            </div>
+                        </div>
+                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <div class="choose-barber__time-group">
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                        </div>
+                    </div>
+                    <div class="choose-barber__card">
+                        <div class="choose-barber__info">
+                            <img src="" alt="" class="choose-barber__avatar">
+                            <div class="choose-barber__wrap">
+                                <span class="choose-barber__position">Барбер</span>
+                                <span class="choose-barber__name">Артур</span>
+                            </div>
+                        </div>
+                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <div class="choose-barber__time-group">
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                        </div>
+                    </div>
+                    <div class="choose-barber__card">
+                        <div class="choose-barber__info">
+                            <img src="" alt="" class="choose-barber__avatar">
+                            <div class="choose-barber__wrap">
+                                <span class="choose-barber__position">Барбер</span>
+                                <span class="choose-barber__name">Артур</span>
+                            </div>
+                        </div>
+                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <div class="choose-barber__time-group">
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                        </div>
+                    </div>
+                    <div class="choose-barber__card">
+                        <div class="choose-barber__info">
+                            <img src="" alt="" class="choose-barber__avatar">
+                            <div class="choose-barber__wrap">
+                                <span class="choose-barber__position">Барбер</span>
+                                <span class="choose-barber__name">Артур</span>
+                            </div>
+                        </div>
+                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <div class="choose-barber__time-group">
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn">9:30</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
     <script src="/scripts/comments-slider.js"></script>
+    <script src="/scripts/modals.js"></script>
 </body>
 </html>
