@@ -514,9 +514,6 @@ footer .container{
     gap: 5px;
     color: #CCCCCC;
 }
-
-
-
 .footer__contacts-text {
     display: inline;
 }
@@ -545,7 +542,6 @@ footer nav, footer section{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 
-    display: none;
 }
 .modals>*{
     position: relative;
@@ -565,6 +561,7 @@ footer nav, footer section{
 }
 .modals__main-modal {
     height: 100%;
+    display: none;
 }
 .modals__header {
     width: 100%;
@@ -634,14 +631,7 @@ footer nav, footer section{
 .modals__choose-barber {
     display: none;
 }
-.modals__header {
-}
-.modals__icon {
-}
-.modals__header-text {
-}
-.weight {
-}
+
 .choose-barber__content {
     display: flex;
     flex-direction: column;
@@ -707,3 +697,98 @@ footer nav, footer section{
     border-radius: 59px;
 }
 
+.choose-date__days-slider {
+    margin-top: 30px;
+}
+.choose-date__month-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.choose-date__month-item {
+    font-family: 'PT Sans';
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+.choose-date__month-item:nth-child(2){
+    color: #E1E1E1;
+    position: absolute;
+    right: 0;
+}
+
+.choose-date__day-list {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    overflow-x: scroll;
+}
+.choose-date__day-list::-webkit-scrollbar{
+    height: 0;
+}
+.choose-date__day {
+    width: 30px;
+}
+.choose-date__day * {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.choose-date__weekday {
+}
+.choose-date__number {
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none
+}
+
+.choose-date__time-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.choose-date__time-list > *{
+    border: 1px solid #F4B22F;
+    border-radius: 15px;
+    padding: 20px 10px;
+}
+.time-list__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.time-list__wrap {
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.time-list__item {
+    text-align: center;
+    border: 1px solid #555555;
+    border-radius: 20px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}

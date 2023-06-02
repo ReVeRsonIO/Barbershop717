@@ -3,7 +3,6 @@ function toggleTables() {
     var femaleTable = document.querySelector(".female-table");
 
     if(maleTable.style.display == "none") {
-        console.log("Klick")
         maleTable.style.display = "table";
         femaleTable.style.display = "none";
     } else {
