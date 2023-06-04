@@ -518,31 +518,32 @@
         <div class="modals__overlay">
             <div class="modals__main-modal">
                 <header class="modals__header">
-                    <img src="./images/icons/close-icon.svg" alt="" class="modals__icon">
+                    <img src="./images/icons/close-icon.svg" alt="" class="modals__icon close-modal-btn">
                     <h5 class="modals__header-text">Онлайн-запись</h5>
                     <div class="weight"></div>
                 </header>
                 <section class="main-modal__content">
                     <span class="modals__choose-text">Выберите:</span>
                     <div class="modals__btn-group">
-                        <button class="modals__button">
+                        <button class="modals__button" data-modal-name="barber">
                             <img src="./images/icons/person-icon.svg" alt="" class="modals__icon">
                             <span class="modals__btn-text">Специалист</span>
                         </button>
-                        <button class="modals__button">
+                        <button class="modals__button" data-modal-name="date">
                             <img src="./images/icons/calendar-icon.svg" alt="" class="modals__icon">
                             <span class="modals__btn-text">Дата визита</span>
                         </button>
-                        <button class="modals__button">
+                        <button class="modals__button" data-modal-name="service">
                             <img src="./images/icons/list-icon.svg" alt="" class="modals__icon">
                             <span class="modals__btn-text">Список услуг</span>
                         </button>
                     </div>
                 </section>
             </div>
+            
             <div class="modals__choose-barber">
                 <header class="modals__header">
-                    <img src="./images/icons/back-icon.svg" alt="" class="modals__icon">
+                    <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
                     <h5 class="modals__header-text">Выберите барбера</h5>
                     <div class="weight"></div>
                 </header>
@@ -641,11 +642,11 @@
             </div>
             <div class="modals__choose-date">
                 <header class="modals__header">
-                    <img src="./images/icons/back-icon.svg" alt="" class="modals__icon">
+                    <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
                     <h5 class="modals__header-text">Выберите дату и время</h5>
                     <div class="weight"></div>
                 </header>
-                <div class="choose-date__days-slider">
+                <section class="choose-date__days-slider">
                     <div class="choose-date__month-list">
                         <button class="choose-date__month-item">Апрель</button>
                         <button class="choose-date__month-item">Май</button>
@@ -700,42 +701,115 @@
                             <span class="choose-date__number">12</span>
                         </div>
                     </div>
-                    <div class="choose-date__time-list">
-                        <div class="time-list__morning">
-                            <span class="time-list__title">Утро</span>
-                            <div class="time-list__wrap">
-                                <span class="time-list__item">9:00</span>
-                                <span class="time-list__item">9:30</span>
-                                <span class="time-list__item">10:00</span>
-                                <span class="time-list__item">11:30</span>
-                                <span class="time-list__item">12:00</span>
-                                <span class="time-list__item">12:30</span>
-                            </div>
-                        </div>
-                        <div class="time-list__afternoon">
-                            <span class="time-list__title">День</span>
-                            <div class="time-list__wrap">
-                                <span class="time-list__item">13:00</span>
-                                <span class="time-list__item">13:30</span>
-                                <span class="time-list__item">14:00</span>
-                                <span class="time-list__item">14:30</span>
-                                <span class="time-list__item">15:00</span>
-                                <span class="time-list__item">15:30</span>
-                            </div>
-                        </div>
-                        <div class="time-list__evening">
-                            <span class="time-list__title">Вечер</span>
-                            <div class="time-list__wrap">
-                                <span class="time-list__item">16:00</span>
-                                <span class="time-list__item">16:30</span>
-                                <span class="time-list__item">17:00</span>
-                                <span class="time-list__item">17:30</span>
-                                <span class="time-list__item">18:00</span>
-                                <span class="time-list__item">18:30</span>
-                            </div>
+                </section>
+                <section class="choose-date__time-list">
+                    <div class="time-list__morning">
+                        <span class="time-list__title">Утро</span>
+                        <div class="time-list__wrap">
+                            <span class="time-list__item">9:00</span>
+                            <span class="time-list__item">9:30</span>
+                            <span class="time-list__item">10:00</span>
+                            <span class="time-list__item">11:30</span>
+                            <span class="time-list__item">12:00</span>
+                            <span class="time-list__item">12:30</span>
+                            
                         </div>
                     </div>
-                </div>
+                    <div class="time-list__afternoon">
+                        <span class="time-list__title">День</span>
+                        <div class="time-list__wrap">
+                            <span class="time-list__item">13:00</span>
+                            <span class="time-list__item">13:30</span>
+                            <span class="time-list__item">14:00</span>
+                            <span class="time-list__item">14:30</span>
+                            <span class="time-list__item">15:00</span>
+                            <span class="time-list__item">15:30</span>
+                        </div>
+                    </div>
+                    <div class="time-list__evening">
+                        <span class="time-list__title">Вечер</span>
+                        <div class="time-list__wrap">
+                            <span class="time-list__item">16:00</span>
+                            <span class="time-list__item">16:30</span>
+                            <span class="time-list__item">17:00</span>
+                            <span class="time-list__item">17:30</span>
+                            <span class="time-list__item">18:00</span>
+                            <span class="time-list__item">18:30</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="modals__choose-service">
+                <header class="modals__header">
+                    <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
+                    <h5 class="modals__header-text">Выберите услуги</h5>
+                    <div class="weight"></div>
+                </header>
+                <section class="modals__sub-menu">
+                    <input type="button" value="Мужские" class="choose-service__btn">
+                    <input type="button" value="Женские" class="choose-service__btn">
+                </section>
+                <table class="services__table male-table">
+                    <caption class="table-caption">Мужские</caption>
+                    <tbody class="services__tbody">
+                        <tr class="services__column">
+                            <th class="services__column-name">Стрижки</th>
+                            <td class="services__cell">
+                                <span class="services__name">Стрижка головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Стрижка головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Стрижка головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                        </tr>
+                        <tr class="services__column">
+                            <th class="services__column-name">Бритье</th>
+                            <td class="services__cell">
+                                <span class="services__name">Бритье головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Бритье головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Бритье головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            
+                        </tr>
+                        <tr class="services__column">
+                            <th class="services__column-name">Уход</th>
+                            <td class="services__cell">
+                                <span class="services__name">Уход головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Уход головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                            <td class="services__cell">
+                                <span class="services__name">Уход головы</span>
+                                <span class="services__description">услуга по уходу, которая придает форму вашим волосам,чтобы улучшить ваш внешний вид и повысить уверенность в себе </span>
+                                <span class="services__cost">400 ₽</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -17,6 +17,9 @@ blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 a {color: #E1E1E1;text-decoration: none; /* no underline */}
+a:hover{
+    cursor: pointer;
+}
 .header-mainpage{
     position: absolute;
     width: 100%;
@@ -76,6 +79,10 @@ main{
     height: 100vh;
     background-image: url(/images/bg-images/header-bg.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     box-sizing: border-box;
 
     display: flex;
@@ -536,12 +543,12 @@ footer nav, footer section{
 
 .modals {
     position: fixed;
+    display: none;
     right: 0;
     top: 0;
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-
 }
 .modals>*{
     position: relative;
@@ -561,7 +568,6 @@ footer nav, footer section{
 }
 .modals__main-modal {
     height: 100%;
-    display: none;
 }
 .modals__header {
     width: 100%;
@@ -578,8 +584,6 @@ footer nav, footer section{
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-}
-.weight {
 }
 .main-modal__content {
     display: flex;
@@ -697,6 +701,9 @@ footer nav, footer section{
     border-radius: 59px;
 }
 
+.modals__choose-date{
+    display: none;
+}
 .choose-date__days-slider {
     margin-top: 30px;
 }
@@ -741,8 +748,6 @@ footer nav, footer section{
     display: block;
     width: 100%;
     text-align: center;
-}
-.choose-date__weekday {
 }
 .choose-date__number {
     color: #1A1A1A;
@@ -791,4 +796,78 @@ footer nav, footer section{
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+}
+
+
+.modals__choose-service{
+    display: none;
+}
+.modals__choose-service .services__tbody{
+    flex-direction: column;
+}
+.modals__header {
+}
+.modals__icon {
+}
+.back-modal-btn {
+}
+.modals__header-text {
+}
+.modals__sub-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.choose-service__btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    width: 100%;
+    color: #FFFFFF !important;
+    padding: 10px 0;
+}
+.modals__choose-service .services__table {
+}
+.table-caption{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.modals__choose-service .services__tbody {
+}
+.modals__choose-service .services__column {
+}
+.modals__choose-service .services__column-name {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: -10px;
+}
+.modals__choose-service .services__cell {
+    color: #E1E1E1;
+    border: 1px solid #F4B22F;
+    border-radius: 15px;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.modals__choose-service .services__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+.modals__choose-service .services__description {
+}
+.modals__choose-service .services__cost {
+    color: #FFFFFF;
+    line-height: 23px;
+    text-align: left;
 }
