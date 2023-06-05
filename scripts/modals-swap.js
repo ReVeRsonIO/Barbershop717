@@ -19,7 +19,6 @@ document.querySelector('.close-modal-btn').addEventListener('click', ()=>{
 })
 
 
-
 //Открытие доп.модальных окон
 document.querySelectorAll('.modals__button').forEach(item => {
     item.addEventListener('click', event => {

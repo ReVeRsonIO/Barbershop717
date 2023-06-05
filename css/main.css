@@ -64,6 +64,9 @@ header>.container{
     display: flex;
     gap: 70px;
 }
+.header__burger{
+    width: 0px;
+}
 main{
     width: 100%;
     display: flex;
@@ -77,8 +80,8 @@ main{
 .billboard {
     width: 100%;
     height: 100vh;
+    max-height: 1080px;
     background-image: url(/images/bg-images/header-bg.jpg);
-    background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -150,7 +153,8 @@ tbody>tr{
 
 
 .block-header{
-    width: 614px;
+    width: 100%;
+    max-width: 614px;
     display: flex;
     justify-content: space-between;
     
@@ -301,10 +305,14 @@ tbody>tr{
     flex-direction: column;
     gap: 80px;
     align-items: center;
+    max-width: 788px;
+    width: 100%;
 }
 .staff_group {
     display: flex;
-    gap: 80px
+    justify-content: space-between;
+    
+    width: 100%;
 }
 .staff_card {
     display: flex;
@@ -805,14 +813,6 @@ footer nav, footer section{
 .modals__choose-service .services__tbody{
     flex-direction: column;
 }
-.modals__header {
-}
-.modals__icon {
-}
-.back-modal-btn {
-}
-.modals__header-text {
-}
 .modals__sub-menu {
     display: flex;
     flex-grow: 1;
@@ -829,18 +829,12 @@ footer nav, footer section{
     color: #FFFFFF !important;
     padding: 10px 0;
 }
-.modals__choose-service .services__table {
-}
 .table-caption{
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
     text-align: left;
     margin-bottom: 10px;
-}
-.modals__choose-service .services__tbody {
-}
-.modals__choose-service .services__column {
 }
 .modals__choose-service .services__column-name {
     text-align: left;
@@ -864,10 +858,110 @@ footer nav, footer section{
     font-size: 18px;
     line-height: 23px;
 }
-.modals__choose-service .services__description {
-}
 .modals__choose-service .services__cost {
     color: #FFFFFF;
     line-height: 23px;
     text-align: left;
 }
+
+
+
+@media (min-height:800px) and (max-width:1200px){
+    .billboard .container{
+        margin-bottom: 150px !important;
+    }
+}
+@media (max-width: 1580px) {
+    .container{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .billboard .container{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1340px) {
+    main{
+        gap: 40px;
+    }
+    .billboard__h1{
+        width: 527px;
+        font-size: 46px;
+        line-height: 60px;
+    }
+    .billboard__h2{
+        width: 559px;
+        margin-bottom: 50px;
+    }
+    .billboard__contacts{
+        margin-top: 40px;
+        gap: 20px;
+    }
+    .contacts {
+        flex-direction: column;
+    }
+    .contacts__info-column{
+        flex-direction: row-reverse;
+        margin-bottom: 40px;
+    }
+    .contacts .subscribe-button{
+        height: 62px;
+    }
+    .social-media__group{
+        gap: 10px;
+    }
+    .contacts__map{
+        display: flex;
+        justify-content: center;
+    }
+    .contacts__map *{
+        width: 100%;
+    }
+}
+@media (max-width:1024px){
+    .header__burger{
+        width:fit-content;
+    }
+    .header__list{
+        display: none;
+    }
+    .gallery__content{
+        width: 100%;
+        height: 660px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .gallery__column{
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 150px 150px 150px;
+        gap: 20px;
+    }
+    .staff_group{
+        gap: 40px;
+    }
+    .staff_img{
+        width: 290px;
+        height: 332px;
+        
+    }
+}
+@media (max-width: 710px){
+    .gallery__content{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+       
+    }
+    .gallery__column:nth-child(2){
+        grid-template-areas:
+        "A B"
+        "A C"
+        "D C"
+        "E E";
+        height: fit-content;
+    }
+    .staff_group{
+
+    }
+}
+@media 
