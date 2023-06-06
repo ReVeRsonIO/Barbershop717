@@ -105,6 +105,7 @@ main{
 .billboard__h1_orange {
     color: #F4B22F;
     font-weight: 700;
+    font-size: inherit !important;
 }
 .billboard__h2 {
     font-size: 32px;
@@ -252,13 +253,16 @@ tbody>tr{
     align-items: center;
     gap: 40px;
     flex-direction: column;
+
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 .gallery__content {
     display: flex;
     gap: 28px;
     width: 980px;
     height: 980px;
-    flex-wrap: 1;
 }
 .gallery__column {
     display: grid;
@@ -434,6 +438,7 @@ tbody>tr{
 }
 .contacts__info-column {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -511,6 +516,8 @@ footer{
 footer .container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
 }
 .footer__nav {
     gap: 25px;
@@ -866,7 +873,7 @@ footer nav, footer section{
 
 
 
-@media (min-height:800px) and (max-width:1200px){
+@media (min-height:850px) and (max-width:1200px){
     .billboard .container{
         margin-bottom: 150px !important;
     }
@@ -917,6 +924,10 @@ footer nav, footer section{
     .contacts__map *{
         width: 100%;
     }
+
+    .staff{
+        gap: 40px;
+    }
 }
 @media (max-width:1024px){
     .header__burger{
@@ -936,6 +947,9 @@ footer nav, footer section{
         grid-template-rows: 150px 150px 150px 150px;
         gap: 20px;
     }
+    .staff{
+        max-width: 660px;
+    }
     .staff_group{
         gap: 40px;
     }
@@ -945,7 +959,69 @@ footer nav, footer section{
         
     }
 }
-@media (max-width: 710px){
+@media (max-width: 700px){
+    
+    .billboard .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px !important; 
+    }
+    .billboard .billboard__contacts{
+        width: 100%;
+    }
+    .billboard__contacts-group{
+        justify-content: space-between;;
+    }
+
+    .gallery__column{
+        grid-template-columns: 132px 132px;
+        grid-template-rows: 132px 132px 132px 132px;
+        gap: 20px;
+    }
+    .staff_group{
+        flex-direction: column;
+    }
+    .staff_card{
+        align-items: center;
+    }
+    footer .container{
+
+    }
+    h3,h5{
+        font-size: 18px
+    }
+    .services__tbody{
+        flex-direction: column;
+    }
+    .services__btn-group{
+        gap:0px;
+    }
+    .services__btn{
+        padding: 10px 30px;
+    }
+    .contacts .subscribe-button{
+        display: none;
+    }
+    footer .footer__logo-link{
+        display: none;
+    }
+
+}
+@media (max-width:600px) {
+    .billboard .container{
+        justify-content: center;
+    }
+    .billboard__h1,.billboard__h2{
+        width: 100%;
+        text-align: center;
+    }
+    .billboard__h1{
+        font-size: 36px;
+    }
+    .billboard__h2{
+        font-size: 24px;
+    }
     .gallery__content{
         flex-direction: column;
         height: fit-content;
@@ -960,8 +1036,33 @@ footer nav, footer section{
         "E E";
         height: fit-content;
     }
-    .staff_group{
-
+}
+@media (max-width:500px){
+    .billboard .subscribe-button{
+        padding: 20px 35px;
+        border: 1px solid #F4B22F;
+    }
+    .header__logo{
+        width: 100px;
+        height: 60px;
+        margin: 5px 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .billboard__h1{
+    }
+    .billboard__h2{
+        
+    }
+    
+    body span{
+        font-size: 14px !important;
+    }
+    .services__name, .staff_post, .contacts span, .billboard__contacts-header, .footer__contacts-text {
+        font-size: 18px !important;
+    }
+    .staff_name{
+        font-size: 24px !important;
     }
 }
-@media 
