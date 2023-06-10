@@ -362,7 +362,7 @@ tbody>tr{
 }
 .comments__hgroup {
     margin-top: 140px;
-    margin-bottom: 160px;
+    margin-bottom: 140px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -450,7 +450,6 @@ tbody>tr{
 }
 .contacts__info-column {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -486,6 +485,9 @@ tbody>tr{
 .social-media__text {
     display: block;
     line-height: 23px;
+}
+.social-media__line span{
+    font-size: 18px;
 }
 .schedule__days-group {
     display: grid;
@@ -610,7 +612,7 @@ footer nav, footer section{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 31px;
+    line-height: 30px;
 }
 .main-modal__content {
     display: flex;
@@ -667,7 +669,13 @@ footer nav, footer section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-height: 100vh;
+    overflow: scroll;
 }
+.choose-barber__content::-webkit-scrollbar{
+    width: 0px;
+}
+
 .choose-barber__card {
     border: 1px solid #F4B22F;
     border-radius: 15px;
@@ -678,6 +686,9 @@ footer nav, footer section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.choose-barber__card:last-child{
+    margin-bottom: 100px;
 }
 .choose-barber__info {
     display: flex;
@@ -730,6 +741,7 @@ footer nav, footer section{
 
 .modals__choose-date{
     display: none;
+    max-height: 100vh;
 }
 .choose-date__days-slider {
     margin-top: 30px;
@@ -794,6 +806,7 @@ footer nav, footer section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex-grow: 1;
 }
 .choose-date__time-list > *{
     border: 1px solid #F4B22F;
@@ -831,6 +844,9 @@ footer nav, footer section{
 }
 .modals__choose-service .services__tbody{
     flex-direction: column;
+
+    height: 100vh;
+    overflow: scroll;
 }
 .modals__sub-menu {
     display: flex;
@@ -871,6 +887,9 @@ footer nav, footer section{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+.modals__choose-service .services__column:last-child{
+    margin-bottom: 200px;
 }
 .modals__choose-service .services__name {
     font-weight: 700;
@@ -1088,10 +1107,7 @@ footer nav, footer section{
     .comments__subheader{
         text-align: center;
     }
-    body span{
-        font-size: 14px !important;
-    }
-    .services__name, .staff_post, .contacts span, .billboard__contacts-header, .footer__contacts-text {
+    .services__name, .staff_post, .schedule__day-name, .schedule__time, .billboard__contacts-header, .footer__contacts-text {
         font-size: 18px !important;
     }
     .staff_name{
@@ -1106,10 +1122,12 @@ footer nav, footer section{
     .billboard__h1{
         font-size: 24px;
         line-height: 31px;
+        margin-bottom: 15px;
     }
     .billboard__h2{
         font-size: 14px !important;
         line-height: 18px !important;
+        margin-bottom: 20px;
     }
     hgroup > h3{
         font-size: 18px !important;
@@ -1130,12 +1148,99 @@ footer nav, footer section{
         width: 36px;
     }
 
+    .comments__card{
+        padding: 30px 20px;
+    }
+    .comments_user-avatar{
+        width: 50px;
+        height: 50px;
+    }
+    .comments__blockquote{
+        max-width: 280px;
+    }
+    .comments__quote{
+        font-size: 14px;
+        line-height: 18px;
+        height: 100px;
+    }
+
 }
-@media (max-width:390px){
+@media (max-width:400px){
     
+    .contacts__social-media{
+        width: fit-content;
+    }
+    .social-media__text{
+        max-width: 150px;
+    }
+
 }
 @media (max-width:375px){
     .billboard__contacts-group{
         gap: 20px;
+    }
+    .contacts .contacts__header{
+        font-size: 18px !important;
+        line-height: 23px;
+    }
+    .schedule__day{
+        justify-content: start;
+    }
+    .schedule__day *{
+        font-size: 14px !important;
+        line-height: 18px !important;
+    }
+    .social-media__group{
+        max-width: 130px;
+    }
+    .social-media__text{
+        font-size: 14px !important;
+    }
+
+    .modals__button{
+        gap: 24px;
+    }
+    .modals__button .modals__btn-text{
+        font-size: 18px;
+    }
+    .modals .modals__header-text{
+        font-size: 18px;
+    }
+    .modals .modals__choose-text{
+        font-size: 18px;
+    }
+    .choose-barber__wrap{
+        justify-content: space-between;
+        row-gap: 15px;
+    }
+    .choose-barber__wrap .choose-barber__position{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .choose-barber__wrap .choose-barber__name{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .choose-barber__avatar{
+        width: 44px;
+        height: 44px;
+    }
+    .choose-barber__card{
+        gap: 15px;
+        padding: 15px;
+    }
+    .choose-barber__time-group{
+        row-gap: 10px;
+    }
+    .choose-barber__card > .choose-barber__near-date, .choose-barber__time-btn{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .choose-date__days-slider{
+        margin-top: 20px;
+    }
+    .choose-date__day-list{
+        margin-bottom: 30px;
     }
 }

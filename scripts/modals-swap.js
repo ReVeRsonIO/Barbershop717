@@ -34,3 +34,7 @@ document.querySelectorAll('.back-modal-btn').forEach(item => {
     })
 })
 
+
+const element = document.querySelector('.element');
+
+
