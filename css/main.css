@@ -1197,7 +1197,7 @@ footer nav, footer section{
         font-size: 14px !important;
     }
 
-    .modals__button{
+    /* .modals__button{
         gap: 24px;
     }
     .modals__button .modals__btn-text{
@@ -1212,8 +1212,8 @@ footer nav, footer section{
     .choose-barber__wrap{
         justify-content: space-between;
         row-gap: 15px;
-    }
-    .choose-barber__wrap .choose-barber__position{
+    } */
+    /* .choose-barber__wrap .choose-barber__position{
         font-size: 14px;
         line-height: 18px;
     }
@@ -1224,8 +1224,8 @@ footer nav, footer section{
     .choose-barber__avatar{
         width: 44px;
         height: 44px;
-    }
-    .choose-barber__card{
+    } */
+    /* .choose-barber__card{
         gap: 15px;
         padding: 15px;
     }
@@ -1235,7 +1235,7 @@ footer nav, footer section{
     .choose-barber__card > .choose-barber__near-date, .choose-barber__time-btn{
         font-size: 14px;
         line-height: 18px;
-    }
+    } */
 
     .choose-date__days-slider{
         margin-top: 20px;
