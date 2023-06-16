@@ -18,7 +18,6 @@ document.querySelector('.close-modal-btn').addEventListener('click', ()=>{
     window.scrollTo(0, parseInt(scrollY || '0'));
 })
 
-
 //Открытие доп.модальных окон
 document.querySelectorAll('.modals__button').forEach(item => {
     item.addEventListener('click', event => {
@@ -34,7 +33,8 @@ document.querySelectorAll('.back-modal-btn').forEach(item => {
     })
 })
 
-
-const element = document.querySelector('.element');
-
-
+document.querySelectorAll('.time-btn').forEach(item => {
+    item.addEventListener('click', event => {
+        console.log(item.innerText)
+    })
+})

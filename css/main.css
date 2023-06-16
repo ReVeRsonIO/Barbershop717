@@ -625,12 +625,28 @@ footer nav, footer section{
     font-size: 22px;
     line-height: 28px;
 }
+.modals__btn-date{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: left;
+}
+.modals__btn-position{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+}
 .modals__btn-text {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
+    text-align: left;
+}
+.modals__btn-main{
+    display: flex;
+    gap: 10px;
 }
 .modals__btn-group {
     display: flex;
@@ -660,9 +676,38 @@ footer nav, footer section{
     cursor: pointer;
     border: 2px solid #F4B22F;
 }
-
+.modals__button[data-modal-name = "service"]{
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.modals__button[data-modal-name = "service"] .modals__btn-text{
+    display: flex;
+    align-items: center;
+}
+.modals__button[data-modal-name = "service"] > .modals__name-wrap{
+    gap: 10px;
+}
+.modals__active-service .modals__name-wrap{
+    width: 100%;
+}
+.modals__name-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;
+}
+.modals__service-name{
+    text-align: left;
+}
+.modals__service-cost{
+    text-align: left;
+}
 .modals__choose-barber {
     display: none;
+}
+.modals__active-service{
+    display: flex;
 }
 
 .choose-barber__content {
@@ -848,6 +893,9 @@ footer nav, footer section{
     height: 100vh;
     overflow: scroll;
 }
+.services__tbody::-webkit-scrollbar{
+    width: 0;
+}
 .modals__sub-menu {
     display: flex;
     flex-grow: 1;
@@ -999,7 +1047,8 @@ footer nav, footer section{
         width: 100%;
     }
     .billboard__contacts-group{
-        justify-content: space-between;;
+        justify-content: space-between;
+        gap: 0px;
     }
 
     .gallery__column{
@@ -1014,7 +1063,7 @@ footer nav, footer section{
         align-items: center;
     }
     h3,h5{
-        font-size: 18px
+        font-size: 18px;
     }
     .services__tbody{
         flex-direction: column;
@@ -1107,7 +1156,7 @@ footer nav, footer section{
     .comments__subheader{
         text-align: center;
     }
-    .services__name, .staff_post, .schedule__day-name, .schedule__time, .billboard__contacts-header, .footer__contacts-text {
+    .staff_post, .schedule__day-name, .schedule__time, .billboard__contacts-header, .footer__contacts-text {
         font-size: 18px !important;
     }
     .staff_name{
@@ -1117,7 +1166,7 @@ footer nav, footer section{
 
 @media (max-width:425px){
     .billboard{
-        max-height: 600px;
+        max-height: 700px;
     }
     .billboard__h1{
         font-size: 24px;
@@ -1136,10 +1185,6 @@ footer nav, footer section{
     hgroup > h4{
         font-size: 14px !important;
         line-height: 18px !important;
-    }
-    .comments__header{
-        font-size: 24px;
-        line-height: 31px;
     }
     .comments__subheader{
         text-align: center;
@@ -1166,7 +1211,10 @@ footer nav, footer section{
 
 }
 @media (max-width:400px){
-    
+    .comments__hgroup .comments__header{
+        font-weight: 700;
+font-size: 24px;
+    }
     .contacts__social-media{
         width: fit-content;
     }
@@ -1178,6 +1226,9 @@ footer nav, footer section{
 @media (max-width:375px){
     .billboard__contacts-group{
         gap: 20px;
+    }
+    .billboard__contacts-item .billboard__contacts-text{
+        font-size: 14px;
     }
     .contacts .contacts__header{
         font-size: 18px !important;
@@ -1197,7 +1248,7 @@ footer nav, footer section{
         font-size: 14px !important;
     }
 
-    /* .modals__button{
+    .modals__button{
         gap: 24px;
     }
     .modals__button .modals__btn-text{
@@ -1211,9 +1262,8 @@ footer nav, footer section{
     }
     .choose-barber__wrap{
         justify-content: space-between;
-        row-gap: 15px;
-    } */
-    /* .choose-barber__wrap .choose-barber__position{
+    }
+    .choose-barber__wrap .choose-barber__position{
         font-size: 14px;
         line-height: 18px;
     }
@@ -1224,8 +1274,8 @@ footer nav, footer section{
     .choose-barber__avatar{
         width: 44px;
         height: 44px;
-    } */
-    /* .choose-barber__card{
+    }
+    .choose-barber__card{
         gap: 15px;
         padding: 15px;
     }
@@ -1235,7 +1285,7 @@ footer nav, footer section{
     .choose-barber__card > .choose-barber__near-date, .choose-barber__time-btn{
         font-size: 14px;
         line-height: 18px;
-    } */
+    }
 
     .choose-date__days-slider{
         margin-top: 20px;

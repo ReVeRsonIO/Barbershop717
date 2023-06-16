@@ -36,7 +36,7 @@
         <section class="billboard">
             <div class="container">
                 <h1 class="billboard__h1">Благодаря нашей <span class="billboard__h1_orange">стрижке </span> твоя <span class="billboard__h1_orange">улыбка </span>будет сиять</h1>
-                <h2 class="billboard__h2">высококачественные услуги по стрижке и уходу за волосами сделанные по современным стандартам</h2>
+                <h2 class="billboard__h2">высококачественные услуги по стрижке и уходу за волосами, сделанные по современным стандартам</h2>
                 <input type="button" value="Записаться" class="subscribe-button">
                 <section class="billboard__contacts">
                     <span class="billboard__contacts-header">Контакты:</span>
@@ -201,18 +201,18 @@
             </article>
             <article class="gallery__content">
                 <div class="gallery__column">
-                    <img src="/images/faces/face-01.png" alt="" class="gallery__image gallery__image1">
-                    <img src="/images/faces/face-02.png" alt="" class="gallery__image gallery__image2">
-                    <img src="/images/faces/face-03.png" alt="" class="gallery__image gallery__image3">
-                    <img src="/images/faces/face-04.png" alt="" class="gallery__image gallery__image4">
-                    <img src="/images/faces/face-05.png" alt="" class="gallery__image gallery__image5">
+                    <img src="./images/faces/face-01.png" alt="" class="gallery__image gallery__image1">
+                    <img src="./images/faces/face-02.png" alt="" class="gallery__image gallery__image2">
+                    <img src="./images/faces/face-03.png" alt="" class="gallery__image gallery__image3">
+                    <img src="./images/faces/face-04.png" alt="" class="gallery__image gallery__image4">
+                    <img src="./images/faces/face-05.png" alt="" class="gallery__image gallery__image5">
                 </div>
                 <div class="gallery__column">
-                    <img src="/images/faces/face-06.png" alt="" class="gallery__image gallery__image1">
-                    <img src="/images/faces/face-07.png" alt="" class="gallery__image gallery__image2">
-                    <img src="/images/faces/face-08.png" alt="" class="gallery__image gallery__image3">
-                    <img src="/images/faces/face-09.png" alt="" class="gallery__image gallery__image4">
-                    <img src="/images/faces/face-10.png" alt="" class="gallery__image gallery__image5">
+                    <img src="./images/faces/face-06.png" alt="" class="gallery__image gallery__image1">
+                    <img src="./images/faces/face-07.png" alt="" class="gallery__image gallery__image2">
+                    <img src="./images/faces/face-08.png" alt="" class="gallery__image gallery__image3">
+                    <img src="./images/faces/face-09.png" alt="" class="gallery__image gallery__image4">
+                    <img src="./images/faces/face-10.png" alt="" class="gallery__image gallery__image5">
                 </div>
             </article>
         </section>
@@ -520,24 +520,54 @@
                     <div class="modals__btn-group">
                         <button class="modals__button" data-modal-name="barber">
                             <img src="./images/icons/person-icon.svg" alt="" class="modals__icon">
-                            <span class="modals__btn-text">Специалист</span>
+                            <div class="modals__name-wrap">
+                                <span class="modals__btn-position"></span>
+                                <span class="modals__btn-text">Специалист</span>
+                            </div>
                         </button>
                         <button class="modals__button" data-modal-name="date">
                             <img src="./images/icons/calendar-icon.svg" alt="" class="modals__icon">
-                            <span class="modals__btn-text">Дата визита</span>
+                            <div class="modals__name-wrap">
+                                <span class="modals__btn-date"><!--Пятница, 5 мая--> Дата визита</span>
+                                <span class="modals__btn-text"> </span>
+                            </div>
                         </button>
                         <button class="modals__button" data-modal-name="service">
-                            <img src="./images/icons/list-icon.svg" alt="" class="modals__icon">
-                            <span class="modals__btn-text">Список услуг</span>
+                            <div class="modals__btn-main">
+                                <img src="./images/icons/list-icon.svg" alt="" class="modals__icon">
+                                <span class="modals__btn-text">Список услуг</span>
+                            </div>
+                            <!-- <div class="modals__name-wrap main-modal__service-group">
+                                <div class="modals__active-service">
+                                    <div class="modals__name-wrap">
+                                        <span class="modals__service-name services__name">Бритье головы</span>
+                                        <span class="modals__service-cost services__description">400 ₽</span>
+                                    </div>
+                                    <img src="./images/icons/trash.svg" alt="" class="modals__trash-icon">
+                                </div>
+                                <div class="modals__active-service">
+                                    <div class="modals__name-wrap">
+                                        <span class="modals__service-name services__name">Бритье головы</span>
+                                        <span class="modals__service-cost services__description">400 ₽</span>
+                                    </div>
+                                    <img src="./images/icons/trash.svg" alt="" class="modals__trash-icon">
+                                </div>
+                                <div class="modals__active-service">
+                                    <div class="modals__name-wrap">
+                                        <span class="modals__service-name services__name">Бритье головы</span>
+                                        <span class="modals__service-cost services__description">400 ₽</span>
+                                    </div>
+                                    <img src="./images/icons/trash.svg" alt="" class="modals__trash-icon">
+                                </div>
+                            </div> -->
                         </button>
                     </div>
                 </section>
             </div>
-            
-            <div class="modals__choose-barber">
+            <div class="modals__choose-barber" data-modal-name="barber">
                 <header class="modals__header">
                     <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
-                    <h5 class="modals__header-text">Выберите барбера</h5>
+                    <h5 class="modals__header-text">Выберите барбера и время</h5>
                     <div class="weight"></div>
                 </header>
                 <section class="choose-barber__content">
@@ -545,26 +575,26 @@
                         <div class="choose-barber__info">
                             <img src="" alt="" class="choose-barber__avatar">
                             <div class="choose-barber__wrap">
-                                <span class="choose-barber__position">Барбер</span>
-                                <span class="choose-barber__name">Артур</span>
+                                <span class="choose-barber__position barber__position">Барбер</span>
+                                <span class="choose-barber__name barber__name">Артур</span>
                             </div>
                         </div>
-                        <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
+                        <span class="choose-barber__near-date">Ближайшее время для записи: <span class="day-value">2 мая, вторник</span></span>
                         <div class="choose-barber__time-group">
-                            <button class="choose-barber__time-btn">9:30</button>
-                            <button class="choose-barber__time-btn">9:30</button>
-                            <button class="choose-barber__time-btn">9:30</button>
-                            <button class="choose-barber__time-btn">9:30</button>
-                            <button class="choose-barber__time-btn">9:30</button>
-                            <button class="choose-barber__time-btn">9:30</button>
+                            <button class="choose-barber__time-btn time-btn">9:30</button>
+                            <button class="choose-barber__time-btn time-btn">10:00</button>
+                            <button class="choose-barber__time-btn time-btn">10:30</button>
+                            <button class="choose-barber__time-btn time-btn">11:00</button>
+                            <button class="choose-barber__time-btn time-btn">11:30</button>
+                            <button class="choose-barber__time-btn time-btn">12:00</button>
                         </div>
                     </div>
                     <div class="choose-barber__card">
                         <div class="choose-barber__info">
                             <img src="" alt="" class="choose-barber__avatar">
                             <div class="choose-barber__wrap">
-                                <span class="choose-barber__position">Барбер</span>
-                                <span class="choose-barber__name">Артур</span>
+                                <span class="choose-barber__position barber__position">Барбер</span>
+                                <span class="choose-barber__name barber__name">Артур</span>
                             </div>
                         </div>
                         <span class="choose-barber__near-date">Ближайшее время для записи 2 мая, вторник:</span>
@@ -633,7 +663,7 @@
                     </div>
                 </section>
             </div>
-            <div class="modals__choose-date">
+            <div class="modals__choose-date" data-modal-name="date">
                 <header class="modals__header">
                     <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
                     <h5 class="modals__header-text">Выберите дату и время</h5>
@@ -693,18 +723,74 @@
                             <span class="choose-date__weekday">ПТ</span>
                             <span class="choose-date__number">12</span>
                         </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">СБ</span>
+                            <span class="choose-date__number">13</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ВС</span>
+                            <span class="choose-date__number">14</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ПН</span>
+                            <span class="choose-date__number">15</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ВТ</span>
+                            <span class="choose-date__number">16</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">СР</span>
+                            <span class="choose-date__number">17</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ЧТ</span>
+                            <span class="choose-date__number">18</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ПТ</span>
+                            <span class="choose-date__number">19</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">СБ</span>
+                            <span class="choose-date__number">20</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ВС</span>
+                            <span class="choose-date__number">21</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ПН</span>
+                            <span class="choose-date__number">22</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ВТ</span>
+                            <span class="choose-date__number">23</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">СР</span>
+                            <span class="choose-date__number">24</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ЧТ</span>
+                            <span class="choose-date__number">25</span>
+                        </div>
+                        <div class="choose-date__day">
+                            <span class="choose-date__weekday">ПТ</span>
+                            <span class="choose-date__number">26</span>
+                        </div>
                     </div>
                 </section>
                 <section class="choose-date__time-list">
                     <div class="time-list__morning">
                         <span class="time-list__title">Утро</span>
                         <div class="time-list__wrap">
-                            <span class="time-list__item">9:00</span>
-                            <span class="time-list__item">9:30</span>
-                            <span class="time-list__item">10:00</span>
-                            <span class="time-list__item">11:30</span>
-                            <span class="time-list__item">12:00</span>
-                            <span class="time-list__item">12:30</span>
+                            <span class="time-list__item time-btn">9:00</span>
+                            <span class="time-list__item time-btn">9:30</span>
+                            <span class="time-list__item time-btn">10:00</span>
+                            <span class="time-list__item time-btn">11:30</span>
+                            <span class="time-list__item time-btn">12:00</span>
+                            <span class="time-list__item time-btn">12:30</span>
                             
                         </div>
                     </div>
@@ -733,7 +819,7 @@
                 </section>
 
             </div>
-            <div class="modals__choose-service">
+            <div class="modals__choose-service" data-modal-name="service">
                 <header class="modals__header">
                     <img src="./images/icons/back-icon.svg" alt="" class="modals__icon back-modal-btn">
                     <h5 class="modals__header-text">Выберите услуги</h5>
