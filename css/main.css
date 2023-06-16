@@ -1166,7 +1166,7 @@ footer nav, footer section{
 
 @media (max-width:425px){
     .billboard{
-        max-height: 700px;
+        max-height: 600px;
     }
     .billboard__h1{
         font-size: 24px;
@@ -1178,9 +1178,22 @@ footer nav, footer section{
         line-height: 18px !important;
         margin-bottom: 20px;
     }
+    .services{
+        gap: 25px;
+    }
+    .services__column .services__column-name{
+        font-weight: 400;
+    }
+    .services__btn{
+        font-weight: 400;
+    }
+    .services__cell .services__name{
+        font-size: 20px;
+        line-height: 22px;
+    }
     hgroup > h3{
-        font-size: 18px !important;
-        line-height: 23px !important;
+        font-size: 24px !important;
+        line-height: 31px !important;
     }
     hgroup > h4{
         font-size: 14px !important;
@@ -1213,7 +1226,7 @@ footer nav, footer section{
 @media (max-width:400px){
     .comments__hgroup .comments__header{
         font-weight: 700;
-font-size: 24px;
+        font-size: 24px;
     }
     .contacts__social-media{
         width: fit-content;
@@ -1251,7 +1264,7 @@ font-size: 24px;
     .modals__button{
         gap: 24px;
     }
-    .modals__button .modals__btn-text{
+    .modals__button .modals__btn-text, .modals__btn-date{
         font-size: 18px;
     }
     .modals .modals__header-text{
@@ -1270,6 +1283,9 @@ font-size: 24px;
     .choose-barber__wrap .choose-barber__name{
         font-size: 18px;
         line-height: 23px;
+    }
+    .modals__btn-main{
+        gap: 24px;
     }
     .choose-barber__avatar{
         width: 44px;
